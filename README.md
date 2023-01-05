@@ -1,2 +1,6 @@
 # Kasper_Project
-Kasper Template
+
+
+
+###Resource:
+[Elzero-Web-School](www.youtube.com/@ElzeroAcademy/playlists)
