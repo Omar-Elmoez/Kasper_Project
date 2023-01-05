@@ -2,5 +2,5 @@
 
 
 
-###Resource:
-[Elzero-Web-School](www.youtube.com/@ElzeroAcademy/playlists)
+### Resource:
+[Elzero-Web-School](https://www.youtube.com/@ElzeroAcademy/playlists)
