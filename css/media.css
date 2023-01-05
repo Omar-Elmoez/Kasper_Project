@@ -1,0 +1,111 @@
+/* Start Phone Screen */
+@media (max-width: 767px) {
+    header .container nav .toggle-icon {
+        display: block;
+    }
+    header .container nav ul {
+        display: none;
+    }
+    header .container nav .toggle-icon:hover + ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 15px;
+        width: 30%;
+        backdrop-filter: blur(5px);
+    }
+    header .container nav ul li a {
+        padding: 15px;
+    }
+    .landing .intro {
+        width: 100%;
+        padding: 5px 15px;
+        justify-content: center;
+    }
+    .landing .change-left,
+    .landing .change-right {
+        display: none;
+    }
+
+    .services .service-content .col > div {
+        flex-direction: column;
+        text-align: center;
+    }
+    .services .service-content .col:first-of-type {
+        margin-bottom: 50px;
+    }
+    .design {
+        height: 830px;
+        flex-direction: column;
+    }
+    .design .image {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .design ul li {
+        text-align: left;
+        margin-left: 65px;
+    }
+
+    .video .info {
+        background-color: transparent;
+    }
+
+    .video .info h3 {
+        font-size: 25px;
+        line-height: 1.3;
+        margin-bottom: 10px;  
+    }
+
+    .skills,
+    .skills .test .container .john {
+        flex-direction: column;
+    }
+
+    .skills .test .john img {
+        margin: 0 auto 30px;
+    }
+    .skills .test .container .john .info {
+        line-height: 1.3;
+        text-align: center;
+        font-size: 14px;
+    }
+    .sub .container {
+        flex-direction: column;
+    }
+    .sub .container form {
+        margin-bottom: 30px;
+    }
+    .sub .container p {
+        margin-left: 0;
+    }
+    .contact .container .content {
+        flex-direction: column;
+    }
+    .contact .container .content .text {
+        order: -1;
+        text-align: center;
+    }
+    .contact .container .content .text h4:last-of-type {
+        margin-top: 30px;
+    }
+    .contact .container .content .text address {
+        margin-bottom: 20px;
+    }
+}
+/* End Phone Screen */
+
+/* Start Small Screen */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 90%;
+    }
+    .landing .intro {
+        width: 100%;
+        background-color: transparent;
+        justify-content: center;
+    }
+
+}
+/* End Small Screen */

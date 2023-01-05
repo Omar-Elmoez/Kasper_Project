@@ -1,0 +1,1110 @@
+/* Start Variables */
+:root {
+    --main-color: #19c8fa;
+    --section-padding: 100px;
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 85%;
+    }
+}
+
+ul {
+    list-style: none;
+}
+/* End Global Rules */
+
+/* Start Components */
+.main-heading {
+    text-align: center;
+}
+
+.main-heading h2 {
+    font-weight: normal;
+    font-size: 40px;
+    margin-bottom: 60px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.main-heading h2::before,
+.main-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.main-heading h2::before {
+    background-color: black;
+    bottom: -20px;
+    height: 2px;
+    width: 120px;
+}
+
+.main-heading h2::after {
+    height: 15px;
+    width: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    bottom: -27px;
+    background-color: white;
+}
+
+.main-heading p {
+    width: 550px;
+    margin: 0 auto 100px;
+    line-height: 1.8;
+    max-width: 100%;
+    color: #777;
+}
+/* End Components */
+
+/* Start Header */
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* to keep the height in small screens, after hide the ul items */
+    min-height: 97.4px;
+}
+
+header .container img {
+    height: 40px;
+}
+
+header .container::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 1px;
+    bottom: 0;
+    background-color: #a2a2a2;
+}
+
+header .container nav {
+    display: flex;
+    align-items: center;
+}
+
+header .container nav .toggle-icon {
+    display: none;
+    color: white;
+    font-size: 22px;
+}
+
+header .container nav ul {
+    display: flex;
+}
+
+header .container nav ul li a {
+    display: block;
+    padding: 40px 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: whitesmoke;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    position: relative;
+}
+
+header .container nav ul li a.active,
+header .container nav ul li a:hover {
+    border-bottom: 1px solid var(--main-color);
+    color: var(--main-color)
+}
+
+header .container nav .form {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    margin-left: 30px;
+    border-left: 1px solid white;
+}
+
+header .container nav .form i {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+/* End Header */
+
+/* Start Landing */
+.landing {
+    background-image: url(../images/landing.jpg);
+    /* color here is like fallback value if the image doesn't appear. */
+    background-color: rgb(63, 59, 54);
+    min-height: 100vh;
+    background-size: cover; 
+    position: relative; 
+}
+
+.landing .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 60%);
+}
+
+.landing .intro {
+    color: whitesmoke;
+    background-color: rgb(15, 116, 143, 70%);
+    width: 50%;
+    padding: 50px;
+    position: relative;
+    top: 160px;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.landing .intro .text {
+    max-width: 500px;
+}
+
+.landing .change-left,
+.landing .change-right {
+    color: whitesmoke;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.landing .change-left {
+    left: 30px;
+}
+
+.landing .change-right {
+    right: 30px;
+}
+
+.landing .intro h1 {
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.landing .intro p {
+    line-height: 2;
+    font-size: 14px;
+}
+
+.landing .circles {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    bottom: 15px;
+    display: flex;
+}
+
+.landing .circles li {
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 5px;
+}
+
+.landing .circles li.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+/* End Landing */
+
+/* Start Services */
+.services {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.services .service-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 40px;
+}
+
+.services .service-content .col {
+    display: grid;
+    row-gap: 50px;
+}
+
+.services .service-content .col > div {
+    display: flex;
+}
+
+.services .service-content .col > div i {
+    flex-basis: 110px;
+}
+
+.services .service-content .col > div .info {
+    flex: 1;
+}
+
+.services .service-content .col > div .info h2 {
+    margin-bottom: 30px;
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+.services .service-content .col > div .info p {
+    line-height: 2;
+    color: #777;
+}
+/* End Services */
+
+/* Start Design */
+.design {
+    background-image: url(../images/design-features.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.design::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 60%);
+}
+
+.design .image,
+.design .info {
+    flex: 1;
+    z-index: 2;
+}
+
+.design .image {
+    text-align: center;
+}
+
+.design .info {
+    color: white;
+}
+.design .info h3 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.design .info li {
+    padding: 15px;
+}
+
+.design .info li::before {
+    /* These are required */
+    content: "\f108";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    /* ======== */
+    margin-right: 30px;
+    /* to make it direct before the text */
+    position: relative;
+    top: 1px;
+}
+/* End Design */
+
+/* Start Portfolio */
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.portfolio ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.portfolio ul li {
+    padding: 15px;
+}
+
+.portfolio .active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.portfolio .pics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.portfolio .pics .photo {
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio .pics .photo .info {
+    background-color: white;
+    padding: 20px;
+    line-height: 1.7;
+    position: absolute;
+    width: 100%;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.portfolio .pics .photo .info span {
+    color: var(--main-color);
+}
+
+.portfolio .pics img {
+    max-width: 100%;
+    height: 100%;
+    transition: .6s;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+    -ms-transition: .6s;
+    -o-transition: .6s;
+}
+
+.portfolio .pics .photo:hover img {
+    transform: scale(1.2) rotate(3deg);
+    -webkit-transform: scale(1.2) rotate(3deg);
+    -moz-transform: scale(1.2) rotate(3deg);
+    -ms-transform: scale(1.2) rotate(3deg);
+    -o-transform: scale(1.2) rotate(3deg);
+}
+
+.portfolio .pics .photo:hover .info {
+    margin-top: -90px;
+}
+
+.portfolio .more {
+    padding: 20px;
+    background-color: var(--main-color);
+    text-align: center;
+    margin-top: 40px;
+}
+/* anchor doesn't inherit color from parent till it has (href) property, it uses the default color from browser stylesheet */
+/* Or you can use color: inherit */
+.portfolio .more a {
+    text-decoration: none;
+    color: white;
+}
+/* End Portfolio */
+
+/* Start Video */
+.video {
+    position: relative;
+}
+
+.video::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 40%);
+}
+
+.video video {
+    width: 100%;
+}
+
+.video .info {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    text-align: center;
+    padding: 50px;
+    background-color: rgb(15 116 143 / 70%);
+    width: 100%;
+    line-height: 2.8;
+}
+
+.video .info h3,
+.video .info p,
+.video .info button {
+    font-weight: normal;
+    text-transform: uppercase;
+    color: white;
+}
+
+.video .info p {
+    margin-bottom: 10px;
+}
+
+.video .info button {
+    background-color: black;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+}
+/* End Video */
+
+/* Start About */
+.about {
+    padding-top: var(--section-padding);
+    text-align: center;
+    background-color: #333;
+}
+
+.about img {
+    max-width: 100%;
+}
+
+/* End About */
+
+/* Start Static */
+.statics {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../images/stats.png);
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.statics .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.statics .container .col {
+    padding: 50px;
+    background-color: rgb(15 116 143 / 70%);
+}
+
+.statics .container .icon {
+    background-color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.statics .container .num {
+    font-weight: bold;
+    font-size: 45px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.statics .container .col p {
+    font-size: 14px;
+}
+/* End Static */
+
+/* Start Skills */
+.skills {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    display: flex;
+}
+
+.skills .test,
+.skills .our-skills {
+    text-align: center;
+    flex: 1;
+}
+
+.skills .container h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.skills .container p {
+    color: #777;
+    line-height: 2;
+    margin-bottom: 60px;
+}
+
+.skills .test .container .john {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.skills .test .container .john .info {
+    line-height: 2;
+    text-align: left;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.skills .test .container .john .info::before {
+    content: "John Doe, CEO";
+    position: absolute;
+    color: #777;
+    right: -5px;
+    bottom: 5px;
+    font-size: 14px;
+}
+
+.skills .test .john img {
+    width: 100px;
+    display: flex;
+    align-self: flex-start;
+    margin-right: 45px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.skills .test .container .balls {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 40px auto;
+}
+
+.skills .test .container .balls li {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #aaa;
+    margin-right: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.skills .test .container .balls li.active {
+    background-color: #19C8FA;
+}
+
+.our-skills .container .bars > div:not(:last-of-type) {
+    margin-bottom: 45px;
+}
+
+.our-skills .container .bars h4 {
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.our-skills .container .out {
+    background-color: #DEDADC;
+}
+
+.our-skills .container .in {
+    background-color: #19C8FA;
+    position: relative;
+    height: 30px;
+}
+
+.our-skills .container .in::before {
+    content: attr(data-progress);
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    right: -20px;
+    top: -45px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.our-skills .container .in::after {
+    content: " ";
+    position: absolute;
+    border: 10px solid;
+    border-color: black transparent transparent;
+    right: -10px;
+    top: -20px;
+}
+/* End Skills */
+
+/* Start Quote */
+.quote {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../images/quote.jpg);
+    background-color: #333;
+    color: white;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+
+.quote::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: rgb(0 0 0 / 80%);
+}
+
+.quote .container {
+    position: relative;
+}
+
+.quote .container q {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.quote .container q::before {
+    content: "\275D";
+}
+
+.quote .container q::after {
+    content: "\275E";
+}
+/* End Quote */
+
+/* Start Pricing */
+.pricing {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.pricing .container .price-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.pricing .container .price-content .col {
+    background-color: #fcfcfc;
+    text-align: center;
+}
+
+.pricing .container .price-content .col .head {
+    padding: 50px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .container .price-content .col .head h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.pricing .container .price-content .col .head p {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.pricing .container .price-content .col .head p sup {
+    font-size: 25px;
+    font-weight: normal;
+    position: relative;
+    top: -35px;
+    left: -10px;
+}
+
+.pricing .container .price-content .col .head p span {
+    font-size: 15px;
+    position: relative;
+    left: 10px;
+}
+
+.pricing .container .price-content .col ul {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pricing .container .price-content .col ul li {
+    padding: 20px;
+    position: relative; 
+}
+
+.pricing .container .price-content .col ul li:not(:last-of-type)::after {
+    content: '';
+    position: absolute;
+    width: 140px;
+    height: 1px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    bottom: 0;
+}
+
+.pricing .container .price-content .col button {
+    margin-top: 30px;
+    padding: 20px 40px;
+    border: 1px solid var(--main-color);
+    color: darkblue;
+    background-color: #fcfcfc;
+}
+
+.pricing .container .contact-text {
+    font-size: 20px;
+    text-align: center;
+    margin: 50px 0 20px;
+}
+
+.pricing .container .contact-link {
+    text-decoration: none;
+    padding: 20px;
+    background-color: var(--main-color);
+    display: block;
+    color: white;
+    text-align: center;
+}
+/* End Pricing */
+
+/* Start Sub */
+.sub {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.sub::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 50%);
+}
+
+.sub .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.sub .container form,
+.sub .container p {
+    flex: 1;
+}
+
+.sub .container form {
+    display: flex;
+    position: relative;
+}
+
+.sub .container form i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    color: var(--main-color);
+}
+
+.sub .container form input[type="email"] {
+    background: none;
+    border: 1px solid white;
+    border-right: none;
+    caret-color: var(--main-color);
+    padding: 20px 20px 20px 60px;
+    width: calc(100% - 130px);
+    outline: none;
+    color: var(--main-color);
+}
+
+.sub .container form input::placeholder {
+    color: whitesmoke;
+}
+
+.sub .container form input[type="submit"] {
+    width: 130px;
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-left: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.sub .container p {
+    margin-left: 40px;
+    line-height: 2;
+}
+/* End Sub */
+
+/* Start Contact */
+.contact {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.contact .container .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .container .content form {
+    flex-basis: 70%;
+}
+
+.contact .container .content form .user-info {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 20px;
+    outline: none;
+}
+
+.contact .container .content form :nth-child(3) {
+    height: 200px;
+}
+
+.contact .container .content form :last-child {
+    padding: 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    display: flex;
+    /* or display: block; will work the same; */ 
+    margin-left: auto;
+    text-transform: uppercase;
+}
+
+.contact .container .content .text {
+    flex-basis: 25%;
+}
+
+.contact .container .content .text h4 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.contact .container .content .text span {
+    display: block;
+    margin-bottom: 10px;
+    color: #777;
+}
+
+.contact .container .content .text h4:last-of-type {
+    margin-top: 40%;
+}
+
+.contact .container .content .text address {
+    line-height: 2;
+    color: #777;
+}
+/* End Contact */
+
+/* Start Footer */
+footer {
+    padding-top: calc(var(--section-padding) / 2);
+    padding-bottom: calc(var(--section-padding) / 2);
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 70%);
+}
+
+footer .container {
+    position: relative;
+}
+
+footer .container img {
+    margin-bottom: 50px;
+}
+
+footer .container p:first-of-type {
+    text-transform: uppercase;
+    margin: 0 auto 20px;
+    width: -moz-fit-content; 
+    border-bottom: 1px solid;
+    padding: 20px;
+}
+
+footer .container ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer .container ul li {
+    padding: 20px;
+}
+
+footer .container p:last-of-type {
+    margin-top: 15px;
+}
+
+footer .container p:last-of-type span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+/* End Footer */
+
+/* Start Loading-overlay */
+.loading-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: darkgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sk-cube-grid {
+    width: 40px;
+    height: 40px;
+}
+.sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: black;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+-webkit-animation-delay: 0.4s;
+        animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+-webkit-animation-delay: 0.1s;
+        animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+-webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+-webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+-webkit-animation-delay: 0s;
+        animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+-webkit-animation-delay: 0.1s;
+        animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+-webkit-animation-delay: 0.2s;
+        animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+} 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+}
+}
+
+@keyframes sk-cubeGridScaleDelay {
+0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+} 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+} 
+}
+/* End Loading-overlay */
+/* Start Arrow Up */
+.arrow-up {
+    z-index: 999;
+    cursor: pointer;
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #19C8FA;
+    display: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* End Arrow Up */
