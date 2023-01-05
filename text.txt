@@ -1,0 +1,38 @@
+1. z-index has (no-effect) with elements with (position: absolue Or position: static),
+SO,
+.. give your element (position: relative) and use (z-index) with it.
+.. NOTE: element with (position: relative) will appear (above) other elements with (position: static) this is the default.
+
+2. when put a background-image for any element ... put also a background-color: #; to display that color .. if there is a 
+problem with the image.  
+
+3. .services .service-content :
+    in this grid.. there are two elements only (two div called col) so .. there is only the column gap;
+    To use the row-gap .. you have to make each col (display: grid) and then define the row-gap;
+
+OR remove the col divs.
+
+4. .design .info .. we can add the icon in html in span:
+    <p>
+        <span> icon </span>
+        text text text
+    </p> ... and you need to make the span .. display: inline-block; to accept margin
+
+with this method .. there is no need to (position: relative; ... top: 1px;)
+
+5. .portfolio .pics {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(337px, 1fr));
+    grid-row-gap: 5px;
+}
+
+If we use 25% insted of 337px .. there will be 4 images in the first row in all screens.
+So we will use media query to handle that.
+
+we can distribute images with flex-box... and every div(contain image) will take flex-basis: 25%;
+
+6. there is a progress element in html .. U can use insted of two divs.
+    <progress value="85" max="100"></progress>
+the browser will display a progress bar and fill 85 of its space.
+
+7. use image with simillar dimensions ... and if U want to change it .. just change only its width or height
