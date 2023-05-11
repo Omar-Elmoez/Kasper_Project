@@ -24,41 +24,109 @@
     <![endif]-->
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="images/logo.png" alt="logo">
-            <nav>
-                <i class="fas fa-bars toggle-icon"></i>
-                <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="form">
-                    <i class="fas fa-search"></i>
+    <div class="slider">
+        <div class="slide slide-one activeSlide" data-id="0">
+            <header>
+                <div class="container">
+                    <img src="images/logo.png" alt="logo">
+                    <nav>
+                        <i class="fas fa-bars toggle-icon"></i>
+                        <ul>
+                            <li><a href="#home" class="active">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                        <div class="form">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
+            </header>
+            <div class="landing">
+                <div class="overlay"></div>
+                <div class="intro">
+                    <div class="text">
+                        <h1>Hello World!<br> We Are Kasper, We Make Art.</h1>
+                        <p>
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
-    <div class="landing">
-        <div class="overlay"></div>
-        <div class="intro">
-            <div class="text">
-                <h1>Hello World!<br> We Are Kasper, We Make Art.</h1>
-                <p>
-                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt. 
-                </p>
+        <div class="slide slide-two inRight" data-id="1">
+            <header>
+                <div class="container">
+                    <img src="images/logo.png" alt="logo">
+                    <nav>
+                        <i class="fas fa-bars toggle-icon"></i>
+                        <ul>
+                            <li><a href="#home" class="active">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                        <div class="form">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <div class="landing">
+                <div class="overlay"></div>
+                <div class="intro">
+                    <div class="text">
+                        <h1>Hello World!<br> We Are Kasper, We Make Art.</h1>
+                        <p>
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide slide-three inRight" data-id="2">
+            <header>
+                <div class="container">
+                    <img src="images/logo.png" alt="logo">
+                    <nav>
+                        <i class="fas fa-bars toggle-icon"></i>
+                        <ul>
+                            <li><a href="#home" class="active">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                        <div class="form">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <div class="landing">
+                <div class="overlay"></div>
+                <div class="intro">
+                    <div class="text">
+                        <h1>Hello World!<br> We Are Kasper, We Make Art.</h1>
+                        <p>
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
         <i class="fas fa-angle-left change-left"></i>
         <i class="fas fa-angle-right change-right"></i>
         <ul class="circles">
-            <li></li>
-            <li class="active"></li>
-            <li></li>
+            <li data-id="0" class="activeDot"></li>
+            <li data-id="1"></li>
+            <li data-id="2"></li>
         </ul>
     </div>
     <section class="services" id="services">
@@ -145,20 +213,20 @@
         </div>
         <div class="pics">
             <div class="photo">
-                <img src="images/shuffle-01.jpg" alt="">
+                <img src="images/shuffle-01.jpg" alt="This is an awesome Photo">
                 <div class="info">Awesome Photo <br> <span>Photography</span></div>
             </div>
             <div class="photo">
-                <img src="images/shuffle-02.jpg" alt="">
+                <img src="images/shuffle-02.jpg" alt="This is an awesome Photo">
                 <div class="info">Awesome Photo <br> <span>Photography</span></div>
 
             </div>
             <div class="photo">
-                <img src="images/shuffle-03.jpg" alt="">
+                <img src="images/shuffle-03.jpg" alt="This is an awesome Photo">
                 <div class="info">Awesome Photo <br> <span>Photography</span></div>
             </div>
             <div class="photo">
-                <img src="images/shuffle-04.jpg" alt="">
+                <img src="images/shuffle-04.jpg" alt="This is an awesome Photo">
                 <div class="info">Awesome Photo <br> <span>Photography</span></div>
             </div>
             <div class="photo">
